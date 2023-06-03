@@ -1,0 +1,14 @@
+# Learning-Python
+
+Basic Python Studies 
+
+# Calculos básicos em Python(S
+
+aluno01 = float(input("Insira 5 notas "))
+aluno02 = float(input("Insira 5 notas "))
+aluno03 = float(input("Insira 5 notas "))
+aluno04 = float(input("Insira 5 notas "))
+aluno05 = float(input("Insira 5 notas "))
+Media = float((aluno01 + aluno02 + aluno03 + aluno04 + aluno05) / 5)
+
+print(Media)
