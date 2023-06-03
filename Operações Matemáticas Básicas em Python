@@ -7,50 +7,25 @@ cor_vermelho = '\033[91m'
 cor_verde = '\033[92m'
 cor_reset = '\033[0m'
 
-aluno01 = float(input("Insira a nota do aluno 01: "))
-aluno02 = float(input("Insira a nota do aluno 02: "))
-aluno03 = float(input("Insira a nota do aluno 03: "))
-aluno04 = float(input("Insira a nota do aluno 04: "))
-aluno05 = float(input("Insira a nota do aluno 05: "))
+notas = []  # Lista para armazenar as notas dos alunos
 
-media = (aluno01 + aluno02 + aluno03 + aluno04 + aluno05) / 5
-soma_notas = aluno01 + aluno02 + aluno03 + aluno04 + aluno05
+for i in range(5):
+    nota = float(input(f"Insira a nota do aluno {i+1}: "))
+    notas.append(nota)  # Adiciona a nota à lista de notas
+
+soma_notas = sum(notas)
+media = soma_notas / len(notas)
+
+situacoes_alunos = []  # Lista para armazenar as situações dos alunos
+
+for nota in notas:
+    if nota >= 5:
+        situacao = cor_verde + "Aprovado" + cor_reset
+    else:
+        situacao = cor_vermelho + "Reprovado" + cor_reset
+    situacoes_alunos.append(situacao)  # Adiciona a situação à lista de situações
 
 if soma_notas >= 25:
     situacao_turma = cor_verde + "Aprovada" + cor_reset
 else:
     situacao_turma = cor_vermelho + "Reprovada" + cor_reset
-
-if aluno01 >= 5:
-    situacao_aluno01 = cor_verde + "Aprovado" + cor_reset
-else:
-    situacao_aluno01 = cor_vermelho + "Reprovado" + cor_reset
-
-if aluno02 >= 5:
-    situacao_aluno02 = cor_verde + "Aprovado" + cor_reset
-else:
-    situacao_aluno02 = cor_vermelho + "Reprovado" + cor_reset
-
-if aluno03 >= 5:
-    situacao_aluno03 = cor_verde + "Aprovado" + cor_reset
-else:
-    situacao_aluno03 = cor_vermelho + "Reprovado" + cor_reset
-
-if aluno04 >= 5:
-    situacao_aluno04 = cor_verde + "Aprovado" + cor_reset
-else:
-    situacao_aluno04 = cor_vermelho + "Reprovado" + cor_reset
-
-if aluno05 >= 5:
-    situacao_aluno05 = cor_verde + "Aprovado" + cor_reset
-else:
-    situacao_aluno05 = cor_vermelho + "Reprovado" + cor_reset
-
-print("Situação dos alunos:")
-print("Aluno 01:", situacao_aluno01, "- Nota:", aluno01)
-print("Aluno 02:", situacao_aluno02, "- Nota:", aluno02)
-print("Aluno 03:", situacao_aluno03, "- Nota:", aluno03)
-print("Aluno 04:", situacao_aluno04, "- Nota:", aluno04)
-print("Aluno 05:", situacao_aluno05, "- Nota:", aluno05)
-print("Média da turma:", media)
-print("Situação da turma:", situacao_turma)
