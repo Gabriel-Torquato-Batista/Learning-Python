@@ -2,13 +2,43 @@
 
 Basic Python Studies 
 
-# Calculos básicos em Python(S
+# Calculos Básicos Python
 
-aluno01 = float(input("Insira 5 notas "))
-aluno02 = float(input("Insira 5 notas "))
-aluno03 = float(input("Insira 5 notas "))
-aluno04 = float(input("Insira 5 notas "))
-aluno05 = float(input("Insira 5 notas "))
-Media = float((aluno01 + aluno02 + aluno03 + aluno04 + aluno05) / 5)
+aluno01 = float(input("Insira a primeira nota: "))
+aluno02 = float(input("Insira a segunda nota: "))
+aluno03 = float(input("Insira a terceira nota: "))
+aluno04 = float(input("Insira a quarta nota: "))
+aluno05 = float(input("Insira a quinta nota: "))
 
-print(Media)
+media = (aluno01 + aluno02 + aluno03 + aluno04 + aluno05) / 5
+
+if aluno01 >= 5:
+    print("Aluno 01 aprovado. Nota:", aluno01)
+else:
+    print("Aluno 01 reprovado. Nota:", aluno01)
+
+if aluno02 >= 5:
+    print("Aluno 02 aprovado. Nota:", aluno02)
+else:
+    print("Aluno 02 reprovado. Nota:", aluno02)
+
+if aluno03 >= 5:
+    print("Aluno 03 aprovado. Nota:", aluno03)
+else:
+    print("Aluno 03 reprovado. Nota:", aluno03)
+
+if aluno04 >= 5:
+    print("Aluno 04 aprovado. Nota:", aluno04)
+else:
+    print("Aluno 04 reprovado. Nota:", aluno04)
+
+if aluno05 >= 5:
+    print("Aluno 05 aprovado. Nota:", aluno05)
+else:
+    print("Aluno 05 reprovado. Nota:", aluno05)
+
+
+if media >= 5:
+    print("Turma Aprovada. Média:", media)
+else:
+    print("Turma Reprovada. Média:", media)
