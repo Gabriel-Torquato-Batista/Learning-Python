@@ -1,44 +1,56 @@
 # Learning-Python
 
-Basic Python Studies 
+# Sistema de Notas Python
 
-# Calculos Básicos Python
+# Definindo as sequências de escape ANSI para as cores
+cor_vermelho = '\033[91m'
+cor_verde = '\033[92m'
+cor_reset = '\033[0m'
 
-aluno01 = float(input("Insira a primeira nota: "))
-aluno02 = float(input("Insira a segunda nota: "))
-aluno03 = float(input("Insira a terceira nota: "))
-aluno04 = float(input("Insira a quarta nota: "))
-aluno05 = float(input("Insira a quinta nota: "))
+aluno01 = float(input("Insira a nota do aluno 01: "))
+aluno02 = float(input("Insira a nota do aluno 02: "))
+aluno03 = float(input("Insira a nota do aluno 03: "))
+aluno04 = float(input("Insira a nota do aluno 04: "))
+aluno05 = float(input("Insira a nota do aluno 05: "))
 
 media = (aluno01 + aluno02 + aluno03 + aluno04 + aluno05) / 5
+soma_notas = aluno01 + aluno02 + aluno03 + aluno04 + aluno05
+
+if soma_notas >= 25:
+    situacao_turma = cor_verde + "Aprovada" + cor_reset
+else:
+    situacao_turma = cor_vermelho + "Reprovada" + cor_reset
 
 if aluno01 >= 5:
-    print("Aluno 01 aprovado. Nota:", aluno01)
+    situacao_aluno01 = cor_verde + "Aprovado" + cor_reset
 else:
-    print("Aluno 01 reprovado. Nota:", aluno01)
+    situacao_aluno01 = cor_vermelho + "Reprovado" + cor_reset
 
 if aluno02 >= 5:
-    print("Aluno 02 aprovado. Nota:", aluno02)
+    situacao_aluno02 = cor_verde + "Aprovado" + cor_reset
 else:
-    print("Aluno 02 reprovado. Nota:", aluno02)
+    situacao_aluno02 = cor_vermelho + "Reprovado" + cor_reset
 
 if aluno03 >= 5:
-    print("Aluno 03 aprovado. Nota:", aluno03)
+    situacao_aluno03 = cor_verde + "Aprovado" + cor_reset
 else:
-    print("Aluno 03 reprovado. Nota:", aluno03)
+    situacao_aluno03 = cor_vermelho + "Reprovado" + cor_reset
 
 if aluno04 >= 5:
-    print("Aluno 04 aprovado. Nota:", aluno04)
+    situacao_aluno04 = cor_verde + "Aprovado" + cor_reset
 else:
-    print("Aluno 04 reprovado. Nota:", aluno04)
+    situacao_aluno04 = cor_vermelho + "Reprovado" + cor_reset
 
 if aluno05 >= 5:
-    print("Aluno 05 aprovado. Nota:", aluno05)
+    situacao_aluno05 = cor_verde + "Aprovado" + cor_reset
 else:
-    print("Aluno 05 reprovado. Nota:", aluno05)
+    situacao_aluno05 = cor_vermelho + "Reprovado" + cor_reset
 
-
-if media >= 5:
-    print("Turma Aprovada. Média:", media)
-else:
-    print("Turma Reprovada. Média:", media)
+print("Situação dos alunos:")
+print("Aluno 01:", situacao_aluno01, "- Nota:", aluno01)
+print("Aluno 02:", situacao_aluno02, "- Nota:", aluno02)
+print("Aluno 03:", situacao_aluno03, "- Nota:", aluno03)
+print("Aluno 04:", situacao_aluno04, "- Nota:", aluno04)
+print("Aluno 05:", situacao_aluno05, "- Nota:", aluno05)
+print("Média da turma:", media)
+print("Situação da turma:", situacao_turma)
